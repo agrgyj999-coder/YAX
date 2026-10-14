@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#11100f">
+  <title>YAX | کافه و بیشتر</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#" aria-label="YAX خانه"><span class="leaf">❧</span><span class="brand-name">YAX</span><small>COFFEE & MORE</small></a>
+  <nav><a href="#contact">تماس با ما</a><a href="#about">درباره ما</a><a class="active" href="#menu">منو</a><a href="#">خانه</a></nav>
+  <button class="cart-top" id="jump-cart" aria-label="سبد خرید">🛒 <b id="cart-count">0</b></button>
+</header>
+
+<section class="hero">
+  <div class="hero-copy">
+    <span class="eyebrow">کافه</span><h1>YAX</h1>
+    <h2>طعم خوب، حال خوب</h2>
+    <p>به کافه YAX خوش آمدید؛ جایی برای لحظه‌های خوب...</p>
+    <a class="gold-btn" href="#menu">مشاهده منو <span>⌄</span></a>
+  </div>
+  <div class="hero-image" role="img" aria-label="قهوه لاته"></div>
+</section>
+
+<main id="menu" class="layout">
+  <section class="catalog">
+    <div class="filters" role="tablist" aria-label="دسته‌بندی منو">
+      <button class="filter" data-category="dessert">دسر 🍰</button>
+      <button class="filter" data-category="food">غذا 🍴</button>
+      <button class="filter" data-category="cold">نوشیدنی‌های سرد 🥤</button>
+      <button class="filter" data-category="coffee">قهوه ☕</button>
+      <button class="filter selected" data-category="all">همه ▦</button>
+    </div>
+    <div class="product-grid" id="product-grid"></div>
+  </section>
+
+  <aside class="sidebar" id="cart-panel">
+    <div class="cart-box">
+      <h2>سبد خرید <span>🛒</span></h2>
+      <div id="cart-items" class="cart-items"><p class="empty">سبد خرید شما خالی است.</p></div>
+      <div class="total-row"><span>جمع کل</span><strong id="cart-total">۰ تومان</strong></div>
+      <button id="checkout" class="black-btn">ثبت سفارش <span>➤</span></button>
+      <p class="hint">نسخه آزمایشی؛ سفارش واقعی ارسال نمی‌شود.</p>
+    </div>
+    <div class="telegram-card">
+      <div class="telegram-icon">➤</div>
+      <h3>سفارش شما به‌سادگی</h3>
+      <p>در نسخه نهایی، سفارش‌ها به تلگرام کافه ارسال می‌شوند و وضعیت آن‌ها از همین‌جا قابل پیگیری خواهد بود.</p>
+      <button id="notify-demo" class="text-btn">تست اعلان آماده‌شدن</button>
+    </div>
+  </aside>
+</main>
+
+<footer id="contact">
+  <div class="footer-brand"><span>YAX</span><small>COFFEE & MORE</small><p>مکانی برای دوستداران قهوه و لحظه‌های خوب</p></div>
+  <div class="footer-info"><p>📍 تهران، خیابان واعظی، پلاک ۱۲۳</p><p>☎ ۰۲۱-۱۲۳۴۵۶۷۸</p><p>◎　➤　◉</p></div>
+  <div class="footer-motto">Good Coffee<br><i>Better Mood</i></div>
+  <div class="copyright">© تمامی حقوق برای کافه YAX محفوظ است.</div>
+</footer>
+
+<div class="modal-backdrop" id="modal" hidden>
+  <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <button class="close-modal" id="close-modal" aria-label="بستن">×</button>
+    <h2 id="modal-title">ثبت سفارش آزمایشی</h2>
+    <p id="modal-message">این نسخه نمایشی است و سفارش واقعی ثبت نمی‌کند.</p>
+    <label>نام شما<input id="customer-name" placeholder="مثلاً علی" maxlength="60"></label>
+    <label>شماره موبایل<input id="customer-phone" inputmode="tel" placeholder="09xxxxxxxxx" maxlength="15"></label>
+    <button class="gold-btn wide" id="confirm-order">ادامه و آماده‌سازی پیام تلگرام</button>
+    <p class="hint">برای اتصال مستقیم و امن به ربات، در نسخه بعدی بک‌اند اضافه می‌کنیم.</p>
+  </section>
+</div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script src="app.js"></script>
+</body>
+</html>
